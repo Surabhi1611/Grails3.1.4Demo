@@ -74,11 +74,14 @@ class UserController {
 
     def fetchUsers(SearchCO searchCO) {
         println "--------------------------------------------------"
-        println params
+        println searchCO.q
+        println searchCO.order
+        println searchCO.search
+        println searchCO.columns
         println "--------------------------------------------------"
-        searchCO.max = params.length ? params.int("length") : 10
-        searchCO.offset = params.start ? params.int("start") : 0
-        List<User> userList = User.search(searchCO).list(max: searchCO.max, offset: searchCO.offset, order: searchCO.order, sort: searchCO.order)
+        searchCO.length = params.length ? params.int("length") : 10
+        searchCO.start = params.start ? params.int("start") : 0
+        List<User> userList = User.search(searchCO).list(max: searchCO.length, offset: searchCO.start, order: null, sort: null)
         List<UserVO> users = userList.collect {
             new UserVO(id: it.id, firstName: it.firstName, lastName: it.lastName, userName: it.userName, email: it.email)
         }
