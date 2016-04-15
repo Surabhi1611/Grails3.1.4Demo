@@ -28,7 +28,7 @@
 /*.zip
 /plugin.xml
 .idea
-
+.idea/workspace.xml
 # older plugin install locations
 /plugins
 /web-app/plugins
