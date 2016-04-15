@@ -27,6 +27,7 @@
 # plugin release files
 /*.zip
 /plugin.xml
+.idea
 
 # older plugin install locations
 /plugins
