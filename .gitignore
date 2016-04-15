@@ -28,6 +28,9 @@
 /*.zip
 /plugin.xml
 .idea
+.gradle
+build/
+build
 .idea/workspace.xml
 # older plugin install locations
 /plugins

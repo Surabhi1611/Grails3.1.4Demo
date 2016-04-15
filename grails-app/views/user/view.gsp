@@ -74,6 +74,7 @@
                 "url": "/user/fetchUsers",
                 "type": "post",
                 data: function (data) {
+                    console.log(data.search);
                     return {
                         "start": data.start,
                         "length": data.length,

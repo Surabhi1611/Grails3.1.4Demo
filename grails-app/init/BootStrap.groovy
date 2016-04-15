@@ -7,7 +7,7 @@ class BootStrap {
         if(!User.count()){
             println("Creating User")
             20.times {
-                new User(firstName: "Surabhi" + it,lastName: "Goyal" + it,email: "Surabhi" + "Goyal" + it.toString() + "@gmail.com",userName: "surabhi.goyal"+it,password: "surabhi"+it).save()
+                new User(firstName: "Surabhi" + (it+1),lastName: "Goyal" + (it+1),email: "Surabhi" + "Goyal" + (it+1).toString() + "@gmail.com",userName: "surabhi.goyal"+(it+1),password: "surabhi"+(it+1)).save()
             }
         }
     }
